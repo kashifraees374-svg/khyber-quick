@@ -28,7 +28,7 @@ export default function Navbar() {
       {/* NAVBAR */}
       <nav
         aria-label="Main navigation"
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-24 transition-all duration-300
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-18 transition-all duration-300
         ${
           scrolled
             ? "bg-[#393838ee] border-b border-red-600/20 backdrop-blur-md shadow-md"
@@ -43,7 +43,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Khyber Quick Logo"
-            className="w-16 h-16 bg-white rounded-lg object-contain"
+            className="w-12 h-12 bg-white rounded-lg object-contain"
           />
 
           <div className="leading-tight">
@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP NAV */}
-        <div className="hidden md:flex items-center gap-7">
+        <div className="hidden text-white md:flex items-center gap-7">
           {NAV_LINKS.map((l) => (
             <button
               key={l.label}
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-24 left-0 right-0 bg-[#111] z-40 border-t border-red-600 md:hidden overflow-hidden transition-all duration-300
+        className={`fixed top-24 left-0 right-0 bg-[#111] text-white z-40 border-t border-red-600 md:hidden overflow-hidden transition-all duration-300
         ${
           menuOpen
             ? "max-h-96 opacity-100 py-5"
