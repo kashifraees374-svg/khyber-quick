@@ -45,7 +45,7 @@ export default function AboutSection() {
                   "🚀 Started in Jehangira, expanding across surrounding areas",
                   "👷 Creating employment for local youth",
                   "🤝 Partnering with 50+ local shops & restaurants",
-                  "📈 Growing to Nowshera and beyond",
+                  "📈 Growing to Jehangira and surrounding the region",
                 ].map((item) => (
                   <li key={item} className="text-gray-700 font-medium">
                     {item}
