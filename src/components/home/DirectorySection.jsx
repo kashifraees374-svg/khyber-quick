@@ -6,31 +6,31 @@ export default function DirectorySection() {
 
   const SHOPS = [
     {
-      name: "   Pizza Point",
+      name: "Anmol fast food",
       category: "Food",
       area: "Jehangira",
-      whatsapp: "923359226974",
+      whatsapp: "923339433704",
       tag: "Popular",
     },
     {
       name: "Al Shifa Pharmacy",
       category: "Medicine",
       area: "Jehangira",
-      whatsapp: "923359226974",
+      whatsapp: "923339433704",
       tag: "24/7",
     },
     {
       name: "Noor Islam Karyana Store",
       category: "Grocery",
       area: "Narri",
-      whatsapp: "923359226974",
+      whatsapp: "923339433704",
       tag: "Fast",
     },
     {
       name: "Kashmir Sweets",
       category: "Bakery",
       area: "Narri",
-      whatsapp: "923359226974",
+      whatsapp: "923339433704",
       tag: "Trending",
     },
   ];

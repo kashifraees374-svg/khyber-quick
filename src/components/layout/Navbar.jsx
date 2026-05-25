@@ -9,17 +9,29 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
+
       setScrolled(isScrolled);
-      setMenuOpen(false); // auto close mobile menu on scroll
+
+      // Auto close mobile menu on scroll
+      if (menuOpen) {
+        setMenuOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menuOpen]);
 
   const scrollTo = (id) => {
     const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+
+    if (el) {
+      el.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
     setMenuOpen(false);
   };
 
@@ -28,7 +40,8 @@ export default function Navbar() {
       {/* NAVBAR */}
       <nav
         aria-label="Main navigation"
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-18 transition-all duration-300
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
+        px-4 sm:px-6 md:px-[5%] h-12 md:h-18 transition-all duration-300
         ${
           scrolled
             ? "bg-[#393838ee] border-b border-red-600/20 backdrop-blur-md shadow-md"
@@ -38,26 +51,27 @@ export default function Navbar() {
         {/* LOGO */}
         <div
           onClick={() => scrollTo("#home")}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center gap-2 sm:gap-3 cursor-pointer"
         >
           <img
             src={logo}
             alt="Khyber Quick Logo"
-            className="w-12 h-12 bg-white rounded-lg object-contain"
+            className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg object-contain"
           />
 
           <div className="leading-tight">
-            <div className="text-white font-extrabold text-lg">
+            <div className="text-white font-extrabold text-sm sm:text-lg">
               KHYBER <span className="text-red-500">QUICK</span>
             </div>
-            <div className="text-white text-[10px] tracking-widest font-extrabold">
+
+            <div className="text-white text-[8px] sm:text-[10px] tracking-widest font-extrabold">
               HAR JAGA • HAR WAQT DELIVERY
             </div>
           </div>
         </div>
 
         {/* DESKTOP NAV */}
-        <div className="hidden text-white md:flex items-center gap-7">
+        <div className="hidden md:flex items-center gap-7 text-white">
           {NAV_LINKS.map((l) => (
             <button
               key={l.label}
@@ -72,7 +86,8 @@ export default function Navbar() {
             href="https://wa.me/923339433704"
             target="_blank"
             rel="noreferrer"
-            className="bg-red-600 hover:bg-red-700 hover:shadow-lg text-white px-5 py-2 rounded-md text-sm font-bold transition"
+            className="bg-red-600 hover:bg-red-700 hover:shadow-lg 
+            text-white px-5 py-2 rounded-md text-sm font-bold transition"
           >
             Order Now
           </a>
@@ -81,7 +96,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white text-3xl"
+          className="md:hidden text-white text-2xl sm:text-3xl"
           aria-label="Toggle menu"
         >
           {menuOpen ? "✕" : "☰"}
@@ -90,19 +105,21 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-24 left-0 right-0 bg-[#111] text-white z-40 border-t border-red-600 md:hidden overflow-hidden transition-all duration-300
+        className={`fixed top-12 left-0 right-0 bg-[#111] text-white z-40 
+        border-t border-red-600 md:hidden overflow-hidden 
+        transition-all duration-300
         ${
           menuOpen
-            ? "max-h-96 opacity-100 py-5"
+            ? "max-h-[500px] opacity-100 py-5"
             : "max-h-0 opacity-0 pointer-events-none py-0"
         }`}
       >
-        <div className="px-[5%] flex flex-col gap-4">
+        <div className="px-5 flex flex-col gap-4">
           {NAV_LINKS.map((l) => (
             <button
               key={l.label}
               onClick={() => scrollTo(l.href)}
-              className="hover:text-red-500 hover:scale-105 transition text-left"
+              className="hover:text-red-500 transition text-left text-base"
             >
               {l.label}
             </button>
@@ -112,7 +129,9 @@ export default function Navbar() {
             href="https://wa.me/923339433704"
             target="_blank"
             rel="noreferrer"
-            className="bg-red-600 hover:bg-red-700 hover:shadow-lg text-white px-5 py-3 rounded-md text-sm font-bold transition text-center"
+            className="bg-red-600 hover:bg-red-700 hover:shadow-lg 
+            text-white px-5 py-3 rounded-md text-sm font-bold 
+            transition text-center mt-2"
           >
             📦 Order Now
           </a>
