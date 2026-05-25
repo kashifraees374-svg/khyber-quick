@@ -61,10 +61,10 @@ export default function HeroSection() {
               FASTEST LOCAL DELIVERY
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-black leading-tight text-white">
+            <h3 className="text-2xl md:text-6xl font-black leading-tight text-white">
               Fast Local Delivery <br />
               <span className="text-red-500">Across Your Area</span>
-            </h1>
+            </h3>
 
             <p className="text-gray-400 mt-6 text-lg leading-relaxed max-w-xl">
               Food, Grocery, Medicine, Parcels & Everything Delivered Fast.
@@ -109,7 +109,7 @@ export default function HeroSection() {
 
           {/* RIGHT SWIPER IMAGE */}
           <div className="flex justify-center">
-            <div className="relative w-[600px] h-[500px]">
+            <div className="relative w-[600px] h-[400px]">
               {/* glow */}
               <div className="absolute inset-0 bg-red-600/20 blur-3xl rounded-full" />
 

@@ -159,10 +159,8 @@ export default function Footer() {
       <div className="border-t border-gray-800 pt-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between gap-3">
         <div className="flex flex-col gap-1 text-start">
           © {new Date().getFullYear()} Khyber Quick. All rights reserved.
-          <p>Food | Grocery | Parcels | Anything</p>
+          <p>| Food | Grocery | Parcels | Anything</p>
         </div>
-
-        <div>Khyber Quick Local Services Pvt. Ltd.</div>
       </div>
     </footer>
   );

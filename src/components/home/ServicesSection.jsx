@@ -36,6 +36,12 @@ const SERVICES = [
     desc: "Cold drinks, juices, tea and more delivered instantly.",
     time: "15-20 mins",
   },
+  {
+    icon: "📚",
+    title: "Urgent Documents",
+    desc: "Quick delivery of important papers and documents.",
+    time: "15-20 mins",
+  },
 ];
 
 
