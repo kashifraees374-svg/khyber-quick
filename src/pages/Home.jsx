@@ -1,4 +1,5 @@
 import HeroSection from "../components/home/HeroSection";
+import HowItWorksSection from "../components/home/HowItWorksSection";
 import AreasSection from "../components/home/AreasSection";
 import ServicesSection from "../components/home/ServicesSection";
 import DirectorySection from "../components/home/DirectorySection";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
+      <HowItWorksSection />
       <ServicesSection />
       <DirectorySection />
       <WhyChooseUs />
