@@ -5,6 +5,8 @@ import ServicesSection from "../components/home/ServicesSection";
 import DirectorySection from "../components/home/DirectorySection";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import DeliveryProcess from "../components/home/DeliveryProcess";
+import PricingCalculator from "../components/home/PricingCalculator";
+
 import AboutSection from "../components/home/AboutSection";
 
 
@@ -17,6 +19,7 @@ export default function Home() {
       <DirectorySection />
       <WhyChooseUs />
       <DeliveryProcess />
+      <PricingCalculator />
       <AreasSection />
       <AboutSection />
      

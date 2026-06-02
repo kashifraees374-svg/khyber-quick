@@ -1,4 +1,5 @@
 import team from "../../assets/images/team.png";
+import { Rocket, Briefcase, Handshake, TrendingUp } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -42,13 +43,29 @@ export default function AboutSection() {
             <div className="space-y-4">
               <ul className="space-y-4">
                 {[
-                  "🚀 Started in Jehangira, expanding across surrounding areas",
-                  "👷 Creating employment for local youth",
-                  "🤝 Partnering with 50+ local shops & restaurants",
-                  "📈 Growing to Jehangira and surrounding the region",
+                  {
+                    icon: <Rocket size={20} className="text-red-600" />,
+                    text: "Started in Jehangira, expanding across surrounding areas",
+                  },
+                  {
+                    icon: <Briefcase size={20} className="text-red-600" />,
+                    text: "Creating employment opportunities for local youth",
+                  },
+                  {
+                    icon: <Handshake size={20} className="text-red-600" />,
+                    text: "Partnering with 50+ local shops & restaurants",
+                  },
+                  {
+                    icon: <TrendingUp size={20} className="text-red-600" />,
+                    text: "Growing across Jehangira and surrounding regions",
+                  },
                 ].map((item) => (
-                  <li key={item} className="text-gray-700 font-medium">
-                    {item}
+                  <li
+                    key={item.text}
+                    className="flex items-start gap-3 text-gray-700 font-medium"
+                  >
+                    {item.icon}
+                    <span>{item.text}</span>
                   </li>
                 ))}
               </ul>

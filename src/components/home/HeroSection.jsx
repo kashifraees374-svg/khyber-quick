@@ -16,23 +16,7 @@ import "swiper/css/pagination";
 export default function HeroSection() {
   const [zoomImg, setZoomImg] = useState(null);
 
-  const STEPS = [
-    {
-      num: "01",
-      title: "Choose Service",
-      desc: "Select food, grocery, medicine or any local shop.",
-    },
-    {
-      num: "02",
-      title: "Place Order",
-      desc: "Send order via app or WhatsApp instantly.",
-    },
-    {
-      num: "03",
-      title: "Fast Delivery",
-      desc: "Our rider delivers within minutes.",
-    },
-  ];
+  
 
   const HERO_IMAGES = [slide1, slide2, slide3, slide4, slide5];
 
