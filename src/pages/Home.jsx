@@ -6,9 +6,8 @@ import DirectorySection from "../components/home/DirectorySection";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import DeliveryProcess from "../components/home/DeliveryProcess";
 import PricingCalculator from "../components/home/PricingCalculator";
-
+import OrderFormSection from "../components/home/OrderFormSection";
 import AboutSection from "../components/home/AboutSection";
-
 
 export default function Home() {
   return (
@@ -21,8 +20,8 @@ export default function Home() {
       <DeliveryProcess />
       <PricingCalculator />
       <AreasSection />
+      <OrderFormSection />
       <AboutSection />
-     
     </div>
   );
 }
